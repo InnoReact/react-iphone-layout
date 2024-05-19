@@ -1,41 +1,30 @@
-벤치마킹 할 자료 탐색 중..
+# React + TypeScript + Vite
 
-```
-{
-  "name": "react-iphone-layout",
-  "version": "1.0.0",
-  "description": "iPhone layout in browser on web",
-  "author": "bangdori <bangdori8865@gmail.com>",
-  "contributors": [],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/BangDori/iPhone-layout"
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+
+- Configure the top-level `parserOptions` property like this:
+
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
   },
-  "bugs": {
-    "url": "https://github.com/BangDori/iPhone-layout/issues",
-    "email": "bangdori8865@gmail.com"
-  },
-  "homepage": "https://github.com/BangDori/iPhone-layout",
-  "keywords": [
-    "iPhone",
-    "webview",
-    "webapp"
-  ],
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
-    "build": "npm run build:typescript && npm run build:babel",
-    "build:typescript": "tsc",
-    "build:babel": "babel lib --out-dir dist --extensions \".ts,.tsx\" --source-maps inline",
-
-    "test": "npm run build && npm run test:lint && npm run test:lib && npm run test:express && npm run test:dist",
-    "test:lib": "mocha -r ts-node/register test/lib/**/*.spec.ts",
-    "test:express": "mocha -r ts-node/register test/express/**/*.spec.ts",
-    "test:dist": "mocha -r ts-node/register test/dist/**/*.spec.ts",
-    "test:lint": "eslint --fix",
-
-    "prepublishOnly": "npm run build"
-  }
 }
 ```
+
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
