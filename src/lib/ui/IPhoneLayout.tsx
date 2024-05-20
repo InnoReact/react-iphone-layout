@@ -4,10 +4,10 @@ import iPhoneStatus from "/assets/image/iPhone_status.png";
 import "./IPhoneLayout.scss";
 
 interface IPhoneLayoutProps {
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
   isStatusBar?: boolean;
 
-  isDynamicSize: boolean;
+  isDynamicSize?: boolean;
   minSize?: number;
   defaultSize?: number;
   maxSize?: number;
@@ -16,7 +16,7 @@ interface IPhoneLayoutProps {
 export const IPhoneLayout: React.FC<IPhoneLayoutProps> = ({
   children,
   isStatusBar = true,
-  isDynamicSize,
+  isDynamicSize = false,
   minSize = 60,
   defaultSize = 75,
   maxSize = 100,
