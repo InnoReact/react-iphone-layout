@@ -1,10 +1,10 @@
-# iPhone-Layout
+# React-iPhone-Layout
 
 ### Install
 #### npm
-    npm install iphone-layout --save-dev
+    npm install react-iphone-layout --save-dev
 #### yarn
-    yarn add iphone-layout --dev
+    yarn add react-iphone-layout --dev
 
 
 ### Quickstart
