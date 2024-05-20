@@ -1,9 +1,5 @@
 import { useEffect, useRef } from "react";
 
-/**
- * iPhone 레이아웃의 크기를 동적으로 변경하는 훅입니다.
- * @returns iPhone 레이아웃의 참조와 사이즈 변경 핸들러
- */
 export const useUtilityIPhone = (
   minSize: number,
   defaultSize: number,
