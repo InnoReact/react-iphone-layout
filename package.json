@@ -1,0 +1,57 @@
+{
+  "name": "react-iphone-layout",
+  "private": false,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "iPhone layout in browser on web",
+  "author": "bangdori <bangdori8865@gmail.com>",
+  "contributors": [
+    "legitgoons <cksxkr5193@naver.com>"
+  ],
+  "license": "MIT",
+  "main": "dist/iphone-layout.cjs.js",
+  "module": "dist/iphone-layout.es.js",
+  "types": "dist/types/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BangDori/iPhone-layout"
+  },
+  "bugs": {
+    "url": "https://github.com/BangDori/iPhone-layout/issues",
+    "email": "bangdori8865@gmail.com"
+  },
+  "homepage": "https://github.com/BangDori/iPhone-layout",
+  "keywords": [
+    "iPhone",
+    "webview",
+    "webapp"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "prebuild": "yarn clean",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "prepare": "tsc && vite build",
+    "prepublishOnly": "rm -rf dist && tsc && vite build"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "sass": "^1.77.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0",
+    "vite-plugin-dts": "^3.9.1"
+  }
+}
