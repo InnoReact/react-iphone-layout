@@ -11,7 +11,7 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/main.tsx"),
+      entry: path.resolve(__dirname, "src/index.ts"),
       name: "React-iPhone-Layout",
       fileName: (format) => `iphone-layout.${format}.js`,
       formats: ["es", "cjs"],
