@@ -4,7 +4,7 @@ import iPhoneStatus from "../assets/iPhone_status.png";
 import "./IPhoneLayout.scss";
 
 interface IPhoneLayoutProps {
-  children: JSX.Element | JSX.Element[];
+  children: React.ReactNode;
   isStatusBar?: boolean;
 
   isDynamicSize?: boolean;
