@@ -1,3 +1,7 @@
+* {
+  scrollbar-width: none;
+}
+
 .description {
   padding-top: 120px;
 
@@ -6,16 +10,14 @@
 
   justify-content: center;
   align-items: center;
+}
 
-  .message {
-    text-align: center;
-  }
-
-  .info {
-    text-align: center;
-
-    .label {
-      margin-right: 8px;
-    }
-  }
+.message {
+  text-align: center;
+}
+.info {
+  text-align: center;
+}
+.label {
+  margin-right: 8px;
 }
