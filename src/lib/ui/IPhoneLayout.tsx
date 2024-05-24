@@ -1,7 +1,7 @@
 import { useUtilityIPhone } from "../hooks/useUtilityIPhone";
 
 import iPhoneStatus from "/assets/image/iPhone_status.png";
-import "./IPhoneLayout.scss";
+import "./IPhoneLayout.css";
 
 interface IPhoneLayoutProps {
   children: JSX.Element | JSX.Element[];

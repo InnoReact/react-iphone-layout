@@ -1,7 +1,7 @@
 import ReactDOM from "react-dom/client";
 
 import { IPhoneLayout } from "./lib";
-import "./main.scss";
+import "./main.css";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <IPhoneLayout isStatusBar isDynamicSize={true}>
