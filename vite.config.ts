@@ -12,7 +12,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/main.tsx'),
-      name: 'iPhone-Layout',
+      name: 'React-iPhone-Layout',
       fileName: (format) => `iphone-layout.${format}.js`,
       formats: ['es', 'cjs'],
     },
@@ -28,4 +28,5 @@ export default defineConfig({
       },
     },
   },
+  assetsInclude: ['/*.png'],
 });

@@ -1,7 +1,7 @@
-import { useUtilityIPhone } from "../hooks/useUtilityIPhone";
+import { useUtilityIPhone } from '../hooks/useUtilityIPhone';
 
-import iPhoneStatus from "/assets/image/iPhone_status.png";
-import "./IPhoneLayout.scss";
+import iPhoneStatus from '../assets/iPhone_status.png';
+import './IPhoneLayout.scss';
 
 interface IPhoneLayoutProps {
   children: JSX.Element | JSX.Element[];
@@ -28,19 +28,19 @@ export const IPhoneLayout: React.FC<IPhoneLayoutProps> = ({
   );
 
   return (
-    <div className="root-layout">
-      <div ref={iPhoneLayoutRef} className="iPhone-layout">
-        <div className="client-area">
-          {isStatusBar && <img className="iPhone-status" src={iPhoneStatus} />}
+    <div className='root-layout'>
+      <div ref={iPhoneLayoutRef} className='iPhone-layout'>
+        <div className='client-area'>
+          {isStatusBar && <img className='iPhone-status' src={iPhoneStatus} />}
           {children}
         </div>
 
         {isDynamicSize && (
-          <div className="iPhone-utility-container">
-            <button className="size-down-btn" onClick={handleSizeDown}>
+          <div className='iPhone-utility-container'>
+            <button className='size-down-btn' onClick={handleSizeDown}>
               -
             </button>
-            <button className="size-up-btn" onClick={handleSizeUp}>
+            <button className='size-up-btn' onClick={handleSizeUp}>
               +
             </button>
           </div>
