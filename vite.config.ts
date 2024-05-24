@@ -10,6 +10,7 @@ export default defineConfig({
     dts({ insertTypesEntry: true, tsconfigPath: "./tsconfig.json" }),
   ],
   build: {
+    cssMinify: "esbuild",
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "React-iPhone-Layout",
@@ -19,6 +20,10 @@ export default defineConfig({
     rollupOptions: {
       external: ["react", "react-dom"],
       output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === "style.css") return "ReactIPhoneLayout.css";
+          return assetInfo.name as string;
+        },
         globals: {
           react: "React",
           "react-dom": "ReactDOM",
