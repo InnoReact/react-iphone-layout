@@ -32,7 +32,8 @@
       "import": "./dist/iphone-layout.es.js",
       "default": "./dist/iphone-layout.cjs.js",
       "types": "./dist/types/index.d.ts"
-    }
+    },
+    "./dist/ReactIPhoneLayout.min.css": "./dist/ReactIPhoneLayout.min.css"
   },
   "scripts": {
     "dev": "vite",
