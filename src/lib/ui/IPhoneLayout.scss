@@ -2,7 +2,7 @@
   scrollbar-width: none;
 }
 
-.root-layout {
+.ril-root {
   height: 100%;
 
   position: absolute;
@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
 
-  .iPhone-layout {
+  .ril-iphone {
     position: relative;
 
     background-image: url("../assets/iPhone.png");
@@ -25,7 +25,7 @@
     aspect-ratio: 256 / 538;
     height: var(--iphone-size);
 
-    .iPhone-status {
+    .ril-status-bar {
       display: block;
       width: 100%;
       background-color: #fff;
@@ -36,7 +36,7 @@
       top: 0;
     }
 
-    .client-area {
+    .ril-client-area {
       position: absolute;
       bottom: 9.17%;
       left: 3.2%;
@@ -49,7 +49,7 @@
       overflow-x: hidden;
     }
 
-    .iPhone-utility-container {
+    .ril-utility-container {
       position: absolute;
       left: 50%;
       bottom: calc(2% + (var(--iphone-size) - 80%) * 0.025);
@@ -59,8 +59,8 @@
       align-items: center;
       gap: 24px;
 
-      .size-down-btn,
-      .size-up-btn {
+      .ril-btn-size-down,
+      .ril-btn-size-up {
         background-color: transparent;
         border: 1px solid #8691a2;
         border-radius: 50%;

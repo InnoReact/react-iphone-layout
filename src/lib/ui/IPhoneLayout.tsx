@@ -28,19 +28,19 @@ export function IPhoneLayout({
   );
 
   return (
-    <div className="root-layout">
-      <div ref={iPhoneLayoutRef} className="iPhone-layout">
-        <div className="client-area">
-          {isStatusBar && <img className="iPhone-status" src={iPhoneStatus} />}
+    <div className="ril-root">
+      <div ref={iPhoneLayoutRef} className="ril-iphone">
+        <div className="ril-client-area">
+          {isStatusBar && <img className="ril-status-bar" src={iPhoneStatus} />}
           {children}
         </div>
 
         {isDynamicSize && (
-          <div className="iPhone-utility-container">
-            <button className="size-down-btn" onClick={handleSizeDown}>
+          <div className="ril-utility-container">
+            <button className="ril-btn-size-down" onClick={handleSizeDown}>
               -
             </button>
-            <button className="size-up-btn" onClick={handleSizeUp}>
+            <button className="ril-btn-size-up" onClick={handleSizeUp}>
               +
             </button>
           </div>
