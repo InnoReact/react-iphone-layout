@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 
-export const useUtilityIPhone = (
+export function useUtilityIPhone(
   minSize: number,
   defaultSize: number,
   maxSize: number
-) => {
+) {
   const iPhoneSizeRef = useRef<number>(defaultSize);
   const iPhoneLayoutRef = useRef<HTMLDivElement>(null);
 
@@ -40,4 +40,4 @@ export const useUtilityIPhone = (
   };
 
   return { iPhoneLayoutRef, handleSizeUp, handleSizeDown };
-};
+}

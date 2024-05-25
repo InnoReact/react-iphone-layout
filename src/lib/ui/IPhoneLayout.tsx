@@ -1,10 +1,10 @@
-import { useUtilityIPhone } from '../hooks/useUtilityIPhone';
+import { useUtilityIPhone } from "../hooks/useUtilityIPhone";
 
-import iPhoneStatus from '../assets/iPhone_status.png';
-import './IPhoneLayout.scss';
+import iPhoneStatus from "../assets/iPhone_status.png";
+import "./IPhoneLayout.scss";
 
 interface IPhoneLayoutProps {
-  children: JSX.Element | JSX.Element[];
+  children: React.ReactNode;
   isStatusBar?: boolean;
 
   isDynamicSize?: boolean;
@@ -13,14 +13,14 @@ interface IPhoneLayoutProps {
   maxSize?: number;
 }
 
-export const IPhoneLayout: React.FC<IPhoneLayoutProps> = ({
+export function IPhoneLayout({
   children,
   isStatusBar = true,
   isDynamicSize = false,
   minSize = 60,
   defaultSize = 75,
   maxSize = 100,
-}) => {
+}: IPhoneLayoutProps) {
   const { iPhoneLayoutRef, handleSizeDown, handleSizeUp } = useUtilityIPhone(
     minSize,
     defaultSize,
@@ -28,19 +28,19 @@ export const IPhoneLayout: React.FC<IPhoneLayoutProps> = ({
   );
 
   return (
-    <div className='root-layout'>
-      <div ref={iPhoneLayoutRef} className='iPhone-layout'>
-        <div className='client-area'>
-          {isStatusBar && <img className='iPhone-status' src={iPhoneStatus} />}
+    <div className="ril-root">
+      <div ref={iPhoneLayoutRef} className="ril-iphone">
+        <div className="ril-client-area">
+          {isStatusBar && <img className="ril-status-bar" src={iPhoneStatus} />}
           {children}
         </div>
 
         {isDynamicSize && (
-          <div className='iPhone-utility-container'>
-            <button className='size-down-btn' onClick={handleSizeDown}>
+          <div className="ril-utility-container">
+            <button className="ril-btn-size-down" onClick={handleSizeDown}>
               -
             </button>
-            <button className='size-up-btn' onClick={handleSizeUp}>
+            <button className="ril-btn-size-up" onClick={handleSizeUp}>
               +
             </button>
           </div>
@@ -48,4 +48,4 @@ export const IPhoneLayout: React.FC<IPhoneLayoutProps> = ({
       </div>
     </div>
   );
-};
+}
