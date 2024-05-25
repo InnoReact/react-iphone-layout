@@ -42,8 +42,6 @@ function App() {
 
 ## Demo
 
-> ✨ **Need to add links to the following methods**
-
 You can see live demos and interact with the library in the following ways:
 
 - **CodeSandbox**: Try out the react-iphone-layout library in an interactive online editor. Click here to view the demo.
