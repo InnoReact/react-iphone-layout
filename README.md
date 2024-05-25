@@ -11,15 +11,15 @@ $ yarn add react-iphone-layout --dev
 
 ## Features
 
-- ...
-- ...
+- **Web App Compatibility**: Easily integrate iPhone-like layouts into your web applications.
+- **Web View Support**: Optimize your web views to provide a seamless iPhone viewing experience.
+- **Dynamic iPhone View Resizing**: Adjust the size of the iPhone view dynamically to fit different content needs.
 
 ## Quickstart
 
 ```jsx
-import React from "react";
-
 import { IPhoneLayout } from "react-iphone-layout";
+import "react-iphone-layout/dist/ReactIPhoneLayout.css";
 
 function App() {
   return (
@@ -42,4 +42,9 @@ function App() {
 
 ## Demo
 
-...
+> ✨ **Need to add links to the following methods**
+
+You can see live demos and interact with the library in the following ways:
+
+- **CodeSandbox**: Try out the react-iphone-layout library in an interactive online editor. Click here to view the demo.
+- **Storybook**: Explore various use cases and component configurations in our Storybook setup. Click here to view the Storybook.
