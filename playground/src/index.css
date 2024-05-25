@@ -1,0 +1,36 @@
+.ril-container {
+  padding-top: 60px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.ril-container .ril-message {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.ril-container .ril-fieldset {
+  margin-top: 12px;
+  padding: 16px;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.ril-container .ril-fieldset .ril-legend {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.ril-container .ril-fieldset .github-link {
+  font-size: 0.75rem;
+}
+
+.ril-container .ril-fieldset .github-link:hover {
+  color: #0366d6;
+}
