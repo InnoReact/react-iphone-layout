@@ -30,3 +30,7 @@
 .ril-container .ril-fieldset .github-link {
   font-size: 0.75rem;
 }
+
+.ril-container .ril-fieldset .github-link:hover {
+  color: #0366d6;
+}
