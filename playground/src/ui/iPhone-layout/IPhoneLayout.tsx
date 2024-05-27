@@ -1,4 +1,4 @@
-import { useUtilityIPhone } from "../../hooks/useUtilityIPhone";
+import { useInitIPhone } from "../../hooks/useInitIPhone";
 
 import iPhoneStatus from "./assets/iPhone_status.png";
 import { ControlBox } from "../control-box";
@@ -8,8 +8,8 @@ interface IPhoneLayoutProps {
   children: React.ReactNode;
   isStatusBar?: boolean;
   position?: "top" | "right" | "bottom" | "left";
+  mode?: "iPhone" | "laptop";
 
-  isDynamicSize?: boolean;
   minSize?: number;
   defaultSize?: number;
   maxSize?: number;
@@ -18,17 +18,12 @@ interface IPhoneLayoutProps {
 export function IPhoneLayout({
   children,
   isStatusBar = true,
-  isDynamicSize = false,
   position = "top",
   minSize = 60,
   defaultSize = 75,
   maxSize = 100,
 }: IPhoneLayoutProps) {
-  const { iPhoneLayoutRef, handleSizeDown, handleSizeUp } = useUtilityIPhone(
-    minSize,
-    defaultSize,
-    maxSize
-  );
+  const { iPhoneLayoutRef, iPhoneSizeRef } = useInitIPhone(defaultSize);
 
   return (
     <>
@@ -40,20 +35,15 @@ export function IPhoneLayout({
             )}
             {children}
           </div>
-
-          {isDynamicSize && (
-            <div className="ril-utility-container">
-              <button className="ril-btn-size-down" onClick={handleSizeDown}>
-                -
-              </button>
-              <button className="ril-btn-size-up" onClick={handleSizeUp}>
-                +
-              </button>
-            </div>
-          )}
         </div>
       </div>
-      <ControlBox position={position} />
+      <ControlBox
+        position={position}
+        iPhoneLayoutRef={iPhoneLayoutRef}
+        iPhoneSizeRef={iPhoneSizeRef}
+        minSize={minSize}
+        maxSize={maxSize}
+      />
     </>
   );
 }

@@ -1,20 +1,9 @@
-import { useEffect, useRef } from "react";
-
-export function useUtilityIPhone(
+export const useResize = (
+  iPhoneLayoutRef: React.RefObject<HTMLDivElement>,
+  iPhoneSizeRef: React.MutableRefObject<number>,
   minSize: number,
-  defaultSize: number,
   maxSize: number
-) {
-  const iPhoneSizeRef = useRef<number>(defaultSize);
-  const iPhoneLayoutRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    document.documentElement.style.setProperty(
-      "--iphone-size",
-      `${defaultSize}%`
-    );
-  }, [defaultSize]);
-
+) => {
   const changeStyle = () => {
     if (iPhoneLayoutRef.current) {
       iPhoneLayoutRef.current.style.height = `${iPhoneSizeRef.current}%`;
@@ -39,5 +28,5 @@ export function useUtilityIPhone(
     changeStyle();
   };
 
-  return { iPhoneLayoutRef, handleSizeUp, handleSizeDown };
-}
+  return { handleSizeUp, handleSizeDown };
+};

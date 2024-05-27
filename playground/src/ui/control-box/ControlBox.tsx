@@ -5,16 +5,32 @@ import MinusIcon from "./assets/minus.svg?react";
 
 import "./ControlBox.css";
 import "./Position.css";
+import { useResize } from "./hooks/useResize";
 
 interface ControlBoxProps {
   position?: "top" | "right" | "bottom" | "left";
+  iPhoneLayoutRef: React.RefObject<HTMLDivElement>;
+  iPhoneSizeRef: React.MutableRefObject<number>;
+  minSize: number;
+  maxSize: number;
 }
 
-export const ControlBox: React.FC<ControlBoxProps> = ({ position }) => {
-  const controlBoxClass = `ril-control-box position__${position}`;
+export const ControlBox: React.FC<ControlBoxProps> = ({
+  position,
+  iPhoneLayoutRef,
+  iPhoneSizeRef,
+  minSize,
+  maxSize,
+}) => {
+  const { handleSizeUp, handleSizeDown } = useResize(
+    iPhoneLayoutRef,
+    iPhoneSizeRef,
+    minSize,
+    maxSize
+  );
 
   return (
-    <aside className={controlBoxClass}>
+    <aside className={`ril-control-box position__${position}`}>
       <ul className="ril-control-list">
         <li className="ril-control-item">
           <IPhoneIcon className="iphone-icon" />
@@ -22,10 +38,10 @@ export const ControlBox: React.FC<ControlBoxProps> = ({ position }) => {
         <li className="ril-control-item">
           <LaptopIcon className="laptop-icon" />
         </li>
-        <li className="ril-control-item">
+        <li className="ril-control-item" onClick={handleSizeUp}>
           <PlusIcon className="plus-icon" />
         </li>
-        <li className="ril-control-item">
+        <li className="ril-control-item" onClick={handleSizeDown}>
           <MinusIcon className="minus-icon" />
         </li>
       </ul>
