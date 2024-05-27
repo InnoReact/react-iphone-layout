@@ -14,6 +14,10 @@ jobs:
   build-storybook:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [14, 16, 18]
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -32,6 +36,7 @@ jobs:
         run: yarn build-storybook
 
       - name: Deploy Storybook to GitHub Pages
+        if: matrix.node-version == 18
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
