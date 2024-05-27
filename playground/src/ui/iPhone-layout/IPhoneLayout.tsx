@@ -3,6 +3,7 @@ import { useInitIPhone } from "./hooks/useInitIPhone";
 import iPhoneStatus from "./assets/iPhone_status.png";
 import { ControlBox } from "../control-box";
 import "./IPhoneLayout.css";
+import { useLaoyutMode } from "./hooks/useLaoyutMode";
 
 interface IPhoneLayoutProps {
   children: React.ReactNode;
@@ -25,10 +26,11 @@ export function IPhoneLayout({
   maxSize = 100,
 }: IPhoneLayoutProps) {
   const { iPhoneLayoutRef, iPhoneSizeRef } = useInitIPhone(defaultSize);
+  const { currentMode, handleChangeMode } = useLaoyutMode(mode);
 
   return (
     <>
-      {mode === "iPhone" ? (
+      {currentMode === "iPhone" ? (
         <div className="ril-root">
           <div ref={iPhoneLayoutRef} className="ril-iphone">
             <div className="ril-client-area">
@@ -46,7 +48,8 @@ export function IPhoneLayout({
         position={position}
         iPhoneLayoutRef={iPhoneLayoutRef}
         iPhoneSizeRef={iPhoneSizeRef}
-        mode={mode}
+        mode={currentMode}
+        handleChangeMode={handleChangeMode}
         minSize={minSize}
         maxSize={maxSize}
       />

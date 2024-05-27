@@ -14,6 +14,7 @@ interface ControlBoxProps {
   iPhoneSizeRef: React.MutableRefObject<number>;
   minSize: number;
   maxSize: number;
+  handleChangeMode: (newMode: "iPhone" | "laptop") => void;
 }
 
 export const ControlBox: React.FC<ControlBoxProps> = ({
@@ -23,6 +24,7 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
   iPhoneSizeRef,
   minSize,
   maxSize,
+  handleChangeMode,
 }) => {
   const { handleSizeUp, handleSizeDown } = useResize(
     iPhoneLayoutRef,
@@ -34,14 +36,20 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
   return (
     <aside className={`ril-control-box position__${position}`}>
       <ul className="ril-control-list">
-        <li className="ril-control-item">
+        <li
+          className="ril-control-item"
+          onClick={() => handleChangeMode("iPhone")}
+        >
           <IPhoneIcon
             className={`iphone-icon ${
               mode === "iPhone" ? "iPhone_focus_mode" : ""
             }`}
           />
         </li>
-        <li className="ril-control-item">
+        <li
+          className="ril-control-item"
+          onClick={() => handleChangeMode("laptop")}
+        >
           <LaptopIcon
             className={`laptop-icon ${
               mode === "laptop" ? "laptop_focus_mode" : ""
