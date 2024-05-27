@@ -10,16 +10,16 @@ export const ControlBox = () => {
     <aside className="ril-control-box">
       <ul className="ril-control-list">
         <li className="ril-control-item">
-          <IPhoneIcon />
+          <IPhoneIcon className="iphone-icon" />
         </li>
         <li className="ril-control-item">
-          <LaptopIcon />
+          <LaptopIcon className="laptop-icon" />
         </li>
         <li className="ril-control-item">
-          <PlusIcon />
+          <PlusIcon className="plus-icon" />
         </li>
         <li className="ril-control-item">
-          <MinusIcon />
+          <MinusIcon className="minus-icon" />
         </li>
       </ul>
     </aside>

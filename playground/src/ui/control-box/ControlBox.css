@@ -26,6 +26,23 @@
 
   border: 1px solid var(--ril-control-basic);
   border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.iphone-icon:hover path {
+  fill: var(--ril-control-focus);
+}
+
+.laptop-icon:hover rect {
+  fill: var(--ril-control-focus);
+}
+
+.plus-icon:hover rect,
+.plus-icon:hover line,
+.minus-icon:hover rect,
+.minus-icon:hover line {
+  stroke: var(--ril-control-focus);
 }
 
 .ril-control-list,
