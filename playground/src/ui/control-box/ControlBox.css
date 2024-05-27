@@ -8,7 +8,7 @@
 .ril-control-box {
   padding: 16px 12px;
 
-  width: 100%;
+  width: 40px;
 
   background-color: var(--ril-control-bg);
   border-radius: 8px;
