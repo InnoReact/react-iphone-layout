@@ -4,6 +4,9 @@ on: #main으로 push되면 실행
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 permissions:
   contents: read
