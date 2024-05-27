@@ -1,9 +1,14 @@
-name: Publish Storybook
+name: Build and Publish Storybook to GitHub Pages
 
 on: #main으로 push되면 실행
   push:
     branches:
       - main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-storybook:
@@ -11,10 +16,10 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '18.x'
           cache: 'yarn'
