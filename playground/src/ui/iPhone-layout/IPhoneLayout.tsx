@@ -19,6 +19,7 @@ export function IPhoneLayout({
   children,
   isStatusBar = true,
   position = "top",
+  mode = "iPhone",
   minSize = 60,
   defaultSize = 75,
   maxSize = 100,
@@ -27,20 +28,25 @@ export function IPhoneLayout({
 
   return (
     <>
-      <div className="ril-root">
-        <div ref={iPhoneLayoutRef} className="ril-iphone">
-          <div className="ril-client-area">
-            {isStatusBar && (
-              <img className="ril-status-bar" src={iPhoneStatus} />
-            )}
-            {children}
+      {mode === "iPhone" ? (
+        <div className="ril-root">
+          <div ref={iPhoneLayoutRef} className="ril-iphone">
+            <div className="ril-client-area">
+              {isStatusBar && (
+                <img className="ril-status-bar" src={iPhoneStatus} />
+              )}
+              {children}
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        children
+      )}
       <ControlBox
         position={position}
         iPhoneLayoutRef={iPhoneLayoutRef}
         iPhoneSizeRef={iPhoneSizeRef}
+        mode={mode}
         minSize={minSize}
         maxSize={maxSize}
       />

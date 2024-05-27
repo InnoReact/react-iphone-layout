@@ -30,10 +30,12 @@
   cursor: pointer;
 }
 
+.iPhone_focus_mode path,
 .iphone-icon:hover path {
   fill: var(--ril-control-focus);
 }
 
+.laptop_focus_mode rect,
 .laptop-icon:hover rect {
   fill: var(--ril-control-focus);
 }

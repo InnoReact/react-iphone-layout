@@ -8,7 +8,8 @@ import "./Position.css";
 import { useResize } from "./hooks/useResize";
 
 interface ControlBoxProps {
-  position?: "top" | "right" | "bottom" | "left";
+  position: "top" | "right" | "bottom" | "left";
+  mode: "iPhone" | "laptop";
   iPhoneLayoutRef: React.RefObject<HTMLDivElement>;
   iPhoneSizeRef: React.MutableRefObject<number>;
   minSize: number;
@@ -17,6 +18,7 @@ interface ControlBoxProps {
 
 export const ControlBox: React.FC<ControlBoxProps> = ({
   position,
+  mode,
   iPhoneLayoutRef,
   iPhoneSizeRef,
   minSize,
@@ -33,10 +35,18 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
     <aside className={`ril-control-box position__${position}`}>
       <ul className="ril-control-list">
         <li className="ril-control-item">
-          <IPhoneIcon className="iphone-icon" />
+          <IPhoneIcon
+            className={`iphone-icon ${
+              mode === "iPhone" ? "iPhone_focus_mode" : ""
+            }`}
+          />
         </li>
         <li className="ril-control-item">
-          <LaptopIcon className="laptop-icon" />
+          <LaptopIcon
+            className={`laptop-icon ${
+              mode === "laptop" ? "laptop_focus_mode" : ""
+            }`}
+          />
         </li>
         <li className="ril-control-item" onClick={handleSizeUp}>
           <PlusIcon className="plus-icon" />
