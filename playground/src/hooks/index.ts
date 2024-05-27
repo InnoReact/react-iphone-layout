@@ -1,1 +1,1 @@
-export { useUtilityIPhone } from "./useUtilityIPhone";
+export { useUtilityIPhone } from "./useInitIPhone";

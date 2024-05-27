@@ -1,0 +1,39 @@
+.position__top {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+
+  transform: translate(-50%, -40%) rotate(270deg);
+
+  & svg {
+    transform: rotate(90deg);
+  }
+}
+
+.position__bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+
+  transform: translate(-50%, 40%) rotate(270deg);
+
+  & svg {
+    transform: rotate(90deg);
+  }
+}
+
+.position__left {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+
+  transform: translateY(-50%);
+}
+
+.position__right {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+
+  transform: translateY(-50%);
+}
