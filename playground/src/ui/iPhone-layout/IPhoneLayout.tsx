@@ -19,7 +19,7 @@ interface IPhoneLayoutProps {
 export function IPhoneLayout({
   children,
   isStatusBar = true,
-  position = "top",
+  position = "right",
   mode = "iPhone",
   minSize = 60,
   defaultSize = 75,
