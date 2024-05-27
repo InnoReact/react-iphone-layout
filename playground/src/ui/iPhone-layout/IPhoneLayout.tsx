@@ -1,4 +1,4 @@
-import { useInitIPhone } from "../../hooks/useInitIPhone";
+import { useInitIPhone } from "./hooks/useInitIPhone";
 
 import iPhoneStatus from "./assets/iPhone_status.png";
 import { ControlBox } from "../control-box";
