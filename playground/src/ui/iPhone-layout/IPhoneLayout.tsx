@@ -1,6 +1,7 @@
-import { useUtilityIPhone } from "../hooks/useUtilityIPhone";
+import { useUtilityIPhone } from "../../hooks/useUtilityIPhone";
 
-import iPhoneStatus from "../assets/iPhone_status.png";
+import iPhoneStatus from "../../assets/iPhone_status.png";
+import { ControlBox } from "../control-box";
 import "./IPhoneLayout.css";
 
 interface IPhoneLayoutProps {
@@ -46,6 +47,7 @@ export function IPhoneLayout({
           </div>
         )}
       </div>
+      <ControlBox />
     </div>
   );
 }
