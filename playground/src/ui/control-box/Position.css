@@ -37,3 +37,22 @@
 
   transform: translateY(-50%);
 }
+
+.laptop__mode {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+}
+
+.laptop__mode .iPhone-active-btn {
+  background: var(--ril-control-bg);
+  padding: 0;
+  margin: 0;
+
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 0;
+
+  cursor: pointer;
+}

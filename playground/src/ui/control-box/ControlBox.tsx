@@ -33,6 +33,19 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
     maxSize
   );
 
+  if (mode === "laptop") {
+    return (
+      <div className="laptop__mode">
+        <button
+          className="iPhone-active-btn"
+          onClick={() => handleChangeMode("iPhone")}
+        >
+          <IPhoneIcon className="iphone-icon" width="64" height="64" />
+        </button>
+      </div>
+    );
+  }
+
   return (
     <aside className={`ril-control-box position__${position}`}>
       <ul className="ril-control-list">
@@ -50,11 +63,7 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
           className="ril-control-item"
           onClick={() => handleChangeMode("laptop")}
         >
-          <LaptopIcon
-            className={`laptop-icon ${
-              mode === "laptop" ? "laptop_focus_mode" : ""
-            }`}
-          />
+          <LaptopIcon className="laptop-icon" />
         </li>
         <li className="ril-control-item" onClick={handleSizeUp}>
           <PlusIcon className="plus-icon" />

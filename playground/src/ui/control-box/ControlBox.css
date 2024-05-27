@@ -35,7 +35,6 @@
   fill: var(--ril-control-focus);
 }
 
-.laptop_focus_mode rect,
 .laptop-icon:hover rect {
   fill: var(--ril-control-focus);
 }
