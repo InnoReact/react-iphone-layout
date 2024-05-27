@@ -4,10 +4,17 @@ import PlusIcon from "./assets/plus.svg?react";
 import MinusIcon from "./assets/minus.svg?react";
 
 import "./ControlBox.css";
+import "./Position.css";
 
-export const ControlBox = () => {
+interface ControlBoxProps {
+  position?: "top" | "right" | "bottom" | "left";
+}
+
+export const ControlBox: React.FC<ControlBoxProps> = ({ position }) => {
+  const controlBoxClass = `ril-control-box position__${position}`;
+
   return (
-    <aside className="ril-control-box">
+    <aside className={controlBoxClass}>
       <ul className="ril-control-list">
         <li className="ril-control-item">
           <IPhoneIcon className="iphone-icon" />

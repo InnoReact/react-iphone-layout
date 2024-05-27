@@ -7,6 +7,7 @@ import "./IPhoneLayout.css";
 interface IPhoneLayoutProps {
   children: React.ReactNode;
   isStatusBar?: boolean;
+  position?: "top" | "right" | "bottom" | "left";
 
   isDynamicSize?: boolean;
   minSize?: number;
@@ -18,6 +19,7 @@ export function IPhoneLayout({
   children,
   isStatusBar = true,
   isDynamicSize = false,
+  position = "top",
   minSize = 60,
   defaultSize = 75,
   maxSize = 100,
@@ -29,25 +31,29 @@ export function IPhoneLayout({
   );
 
   return (
-    <div className="ril-root">
-      <div ref={iPhoneLayoutRef} className="ril-iphone">
-        <div className="ril-client-area">
-          {isStatusBar && <img className="ril-status-bar" src={iPhoneStatus} />}
-          {children}
-        </div>
-
-        {isDynamicSize && (
-          <div className="ril-utility-container">
-            <button className="ril-btn-size-down" onClick={handleSizeDown}>
-              -
-            </button>
-            <button className="ril-btn-size-up" onClick={handleSizeUp}>
-              +
-            </button>
+    <>
+      <div className="ril-root">
+        <div ref={iPhoneLayoutRef} className="ril-iphone">
+          <div className="ril-client-area">
+            {isStatusBar && (
+              <img className="ril-status-bar" src={iPhoneStatus} />
+            )}
+            {children}
           </div>
-        )}
+
+          {isDynamicSize && (
+            <div className="ril-utility-container">
+              <button className="ril-btn-size-down" onClick={handleSizeDown}>
+                -
+              </button>
+              <button className="ril-btn-size-up" onClick={handleSizeUp}>
+                +
+              </button>
+            </div>
+          )}
+        </div>
       </div>
-      <ControlBox />
-    </div>
+      <ControlBox position={position} />
+    </>
   );
 }
