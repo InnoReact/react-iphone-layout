@@ -1,6 +1,6 @@
 # React-iPhone-Layout
 
-![iPhone Layout](https://github.com/BangDori/react-iphone-layout/assets/44726494/02561622-0e59-44b4-ac13-2a6dc58178d0)
+![iphone_image](https://github.com/BangDori/react-iphone-layout/assets/44726494/9015f4fb-caf3-4c4f-b660-46c9f94c8f81)
 
 ## Installation
 
