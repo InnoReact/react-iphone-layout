@@ -16,7 +16,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: "React-iPhone-Layout",
-      fileName: (format) => `iphone-layout.${format}.js`,
+      fileName: (format) => `react-iphone-layout.${format}.js`,
       formats: ["es", "cjs"],
     },
     rollupOptions: {
