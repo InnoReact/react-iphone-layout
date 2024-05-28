@@ -30,6 +30,7 @@
   cursor: pointer;
 }
 
+.iPhone_focus_mode path,
 .iphone-icon:hover path {
   fill: var(--ril-control-focus);
 }
