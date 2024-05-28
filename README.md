@@ -33,13 +33,15 @@ function App() {
 
 ## Props
 
-| **Props**     | **Type** | **Default** |
-| :------------ | :------- | :---------- |
-| isStatusBar   | boolean  | true        |
-| isDynamicSize | boolean  | false       |
-| minSize       | number   | 60          |
-| defaultSize   | number   | 75          |
-| maxSize       | number   | 100         |
+| **Props**     | **Type**                           | **Default** |
+| :------------ | :--------------------------------- | :---------- |
+| isStatusBar   | boolean                            | true        |
+| isDynamicSize | boolean                            | false       |
+| position      | `"top", "right", "bottom", "left"` | "right"     |
+| mode          | `"iPhone", "laptop"`               | "iPhone"    |
+| minSize       | number                             | 60          |
+| defaultSize   | number                             | 75          |
+| maxSize       | number                             | 100         |
 
 ## Demo
 
