@@ -30,13 +30,12 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm install
 
       - name: Build Storybook
-        run: npm build-storybook
+        run: npm run build-storybook
 
       - name: Deploy Storybook to GitHub Pages
         if: matrix.node-version == 18
