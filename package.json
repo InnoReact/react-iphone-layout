@@ -1,36 +1,42 @@
 {
   "name": "react-iphone-layout",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "type": "module",
-  "description": "iPhone layout in browser on web",
+  "description": "React iPhone layout in web browser",
   "author": "bangdori <bangdori8865@gmail.com>",
   "contributors": [
     "legitgoons <cksxkr5193@naver.com>"
   ],
   "license": "MIT",
-  "main": "dist/iphone-layout.cjs.js",
-  "module": "dist/iphone-layout.es.js",
+  "main": "dist/react-iphone-layout.cjs.js",
+  "module": "dist/react-iphone-layout.es.js",
   "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BangDori/iPhone-layout"
+    "url": "git+https://github.com/BangDori/react-iphone-layout"
   },
   "bugs": {
-    "url": "https://github.com/BangDori/iPhone-layout/issues",
+    "url": "https://github.com/BangDori/react-iphone-layout/issues",
     "email": "bangdori8865@gmail.com"
   },
-  "homepage": "https://github.com/BangDori/iPhone-layout",
+  "homepage": "https://github.com/BangDori/react-iphone-layout#readme",
   "keywords": [
+    "react-iPhone",
     "iPhone",
     "webview",
-    "webapp"
+    "webapp",
+    "react-iphone-preview",
+    "iPhone-layout",
+    "react-iphone-layout",
+    "iphone-dynamic-layout",
+    "dynamic-iphone-view"
   ],
   "exports": {
     ".": {
-      "module": "./dist/iphone-layout.es.js",
-      "import": "./dist/iphone-layout.es.js",
-      "default": "./dist/iphone-layout.cjs.js",
+      "module": "./dist/react-iphone-layout.es.js",
+      "import": "./dist/react-iphone-layout.es.js",
+      "default": "./dist/react-iphone-layout.cjs.js",
       "types": "./dist/types/index.d.ts"
     },
     "./dist/ReactIPhoneLayout.css": "./dist/ReactIPhoneLayout.css"
