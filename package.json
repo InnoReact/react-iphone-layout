@@ -42,13 +42,13 @@
     "./dist/ReactIPhoneLayout.css": "./dist/ReactIPhoneLayout.css"
   },
   "scripts": {
-    "start": "cd playground && yarn dev",
+    "start": "cd playground && npm run dev",
     "dev": "vite",
-    "build": "yarn cache clean && tsc && vite build && cp -r src/lib/ui/iPhone-layout/assets dist/lib/ui/iPhone-layout/assets",
+    "build": "npm cache clean --force && tsc && vite build && cp -r src/lib/ui/iPhone-layout/assets dist/lib/ui/iPhone-layout/assets",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "tsc && vite build",
-    "prepublishOnly": "rm -rf dist && yarn build"
+    "prepublishOnly": "rm -rf dist && npm run build"
   },
   "dependencies": {
     "react": "^18.2.0",
