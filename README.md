@@ -16,7 +16,7 @@ $ yarn add react-iphone-layout --dev
 - **Dynamic iPhone View Resizing**: Adjust the size of the iPhone view dynamically to fit different content needs.
 - **Real-Time View Switching**: Check the iPhone view and laptop view in real-time through a control box, allowing for seamless testing and optimization of layouts across different devices.
 
-## Quickstart
+## Getting Started
 
 ```jsx
 import { IPhoneLayout } from "react-iphone-layout";
