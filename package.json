@@ -44,7 +44,7 @@
   "scripts": {
     "start": "cd playground && yarn dev",
     "dev": "vite",
-    "build": "tsc && vite build && cp -r src/lib/ui/iPhone-layout/assets dist/lib/ui/iPhone-layout/assets",
+    "build": "yarn cache clean && tsc && vite build && cp -r src/lib/ui/iPhone-layout/assets dist/lib/ui/iPhone-layout/assets",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "prepare": "tsc && vite build",
