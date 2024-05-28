@@ -19,7 +19,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14, 16, 18]
+        node-version: [18, 20]
 
     steps:
       - name: Checkout code
@@ -29,14 +29,14 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'yarn'
+          cache: 'npm'
           cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: yarn install
+        run: npm install
 
       - name: Build Storybook
-        run: yarn build-storybook
+        run: npm build-storybook
 
       - name: Deploy Storybook to GitHub Pages
         if: matrix.node-version == 18
