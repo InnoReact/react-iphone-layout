@@ -42,6 +42,7 @@
     "./dist/ReactIPhoneLayout.css": "./dist/ReactIPhoneLayout.css"
   },
   "scripts": {
+    "start": "cd playground && yarn dev",
     "dev": "vite",
     "build": "tsc && vite build && cp -r src/lib/ui/iPhone-layout/assets dist/lib/ui/iPhone-layout/assets",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
