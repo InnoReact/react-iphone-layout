@@ -14,6 +14,7 @@ $ yarn add react-iphone-layout --dev
 - **Web App Compatibility**: Easily integrate iPhone-like layouts into your web applications.
 - **Web View Support**: Optimize your web views to provide a seamless iPhone viewing experience.
 - **Dynamic iPhone View Resizing**: Adjust the size of the iPhone view dynamically to fit different content needs.
+- **Real-Time View Switching**: Check the iPhone view and laptop view in real-time through a control box, allowing for seamless testing and optimization of layouts across different devices.
 
 ## Quickstart
 
