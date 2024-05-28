@@ -1,6 +1,6 @@
 name: Build and Publish Storybook to GitHub Pages
 
-on: #main으로 push되면 실행
+on: # main으로 push되면 실행
   push:
     branches:
       - main
@@ -30,6 +30,10 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+          cache-dependency-path: package-lock.json
+
+      - name: Clear npm cache
+        run: npm cache clean --force
 
       - name: Install dependencies
         run: npm install
