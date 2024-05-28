@@ -7,3 +7,6 @@ yarn.lock
 node_modules
 .gitignore
 *.tgz
+playground
+.github
+.yarn-error.log
