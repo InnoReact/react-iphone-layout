@@ -1,1 +1,1 @@
-export { IPhoneLayout } from "./IPhoneLayout";
+export { IPhoneLayout } from "./iPhone-layout";

@@ -1,0 +1,55 @@
+:root {
+  --ril-control-bg: #313a46;
+  --ril-control-basic: #b3b9c4;
+  --ril-control-hover: #bccee4;
+  --ril-control-focus: #fff;
+}
+
+.ril-control-box {
+  padding: 16px 12px;
+
+  width: 40px;
+
+  background-color: var(--ril-control-bg);
+  border-radius: 8px;
+}
+
+.ril-control-box .ril-control-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ril-control-list .ril-control-item {
+  width: 40px;
+  height: 40px;
+
+  border: 1px solid var(--ril-control-basic);
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.iPhone_focus_mode path,
+.iphone-icon:hover path {
+  fill: var(--ril-control-focus);
+}
+
+.laptop-icon:hover rect {
+  fill: var(--ril-control-focus);
+}
+
+.plus-icon:hover rect,
+.plus-icon:hover line,
+.minus-icon:hover rect,
+.minus-icon:hover line {
+  stroke: var(--ril-control-focus);
+}
+
+.ril-control-list,
+.ril-control-item {
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
