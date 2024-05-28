@@ -7,4 +7,5 @@ yarn.lock
 node_modules
 .gitignore
 *.tgz
-yarn-error.log
+.github
+.yarn-error.log
