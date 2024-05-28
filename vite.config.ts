@@ -20,7 +20,7 @@ export default defineConfig({
       formats: ["es", "cjs"],
     },
     rollupOptions: {
-      external: ["react", "react-dom"],
+      external: ["react", "react-dom", "playground/**"],
       output: {
         assetFileNames: (assetInfo) => {
           if (assetInfo.name === "style.css") return "ReactIPhoneLayout.css";
