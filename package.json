@@ -14,13 +14,13 @@
   "types": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BangDori/react-iphone-layout.git"
+    "url": "git+https://github.com/InnoReact/react-iphone-layout.git"
   },
   "bugs": {
-    "url": "https://github.com/BangDori/react-iphone-layout/issues",
+    "url": "https://github.com/InnoReact/react-iphone-layout/issues",
     "email": "bangdori8865@gmail.com"
   },
-  "homepage": "https://github.com/BangDori/react-iphone-layout#readme",
+  "homepage": "https://github.com/InnoReact/react-iphone-layout#readme",
   "keywords": [
     "react-iPhone",
     "iPhone",
