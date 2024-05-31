@@ -6,6 +6,7 @@
 
 ```shell
 $ npm install react-iphone-layout --save-dev
+
 $ yarn add react-iphone-layout --dev
 ```
 
