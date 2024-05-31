@@ -1,3 +1,15 @@
+# React-iPhone-Layout
+
+![iphone_image](https://github.com/BangDori/react-iphone-layout/assets/44726494/9015f4fb-caf3-4c4f-b660-46c9f94c8f81)
+
+## 설치
+
+```shell
+$ npm install react-iphone-layout --save-dev
+
+$ yarn add react-iphone-layout --dev
+```
+
 ## 기능
 
 - **웹 앱 호환성**: iPhone 레이아웃을 쉽게 웹 애플리케이션에 통합할 수 있습니다.
