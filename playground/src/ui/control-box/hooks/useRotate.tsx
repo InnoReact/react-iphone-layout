@@ -1,20 +1,20 @@
 import { useEffect, useRef } from "react";
 
-const IPHONE_PROTRAIT_MODE = 0; // 세로 모드
+const IPHONE_PORTRAIT_MODE = 0; // 세로 모드
 const IPHONE_LANDSCAPE_MODE = -90; // 가로 모드
 
 export const useRotate = () => {
-  const iPhoneModeRef = useRef(IPHONE_PROTRAIT_MODE);
+  const iPhoneModeRef = useRef(IPHONE_PORTRAIT_MODE);
 
   useEffect(() => {
     document.documentElement.style.setProperty(
       "--iphone-mode",
-      `${IPHONE_PROTRAIT_MODE}deg`
+      `${IPHONE_PORTRAIT_MODE}deg`
     );
   }, []);
 
   const handleRotate = () => {
-    if (iPhoneModeRef.current === IPHONE_PROTRAIT_MODE) {
+    if (iPhoneModeRef.current === IPHONE_PORTRAIT_MODE) {
       // 가로 모드로 변경
       iPhoneModeRef.current = IPHONE_LANDSCAPE_MODE;
       document.documentElement.style.setProperty(
@@ -23,10 +23,10 @@ export const useRotate = () => {
       );
     } else {
       // 세로 모드로 변경
-      iPhoneModeRef.current = IPHONE_PROTRAIT_MODE;
+      iPhoneModeRef.current = IPHONE_PORTRAIT_MODE;
       document.documentElement.style.setProperty(
         "--iphone-mode",
-        `${IPHONE_PROTRAIT_MODE}deg`
+        `${IPHONE_PORTRAIT_MODE}deg`
       );
     }
   };
