@@ -16,6 +16,7 @@ $ yarn add react-iphone-layout --dev
 - **Web View Support**: Optimize for iPhone on the web to provide a seamless web view.
 - **Dynamic iPhone View Resizing**: You can dynamically adjust the size of the iPhone view.
 - **Real-Time View Switching**: Check the iPhone view and laptop view in real-time through a control box, allowing for seamless testing and optimization of layouts across different devices.
+- **Rotation iPhone**: provide a screen rotation feature for the iPhone. (The internal content does not rotate)
 
 ## Getting Started
 
