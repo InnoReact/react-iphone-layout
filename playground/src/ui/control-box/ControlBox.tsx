@@ -1,5 +1,6 @@
-import IPhoneIcon from "./assets/iPhone.svg?react";
+import IPhoneIcon from "./assets/iphone.svg?react";
 import LaptopIcon from "./assets/laptop.svg?react";
+import RotationIcon from "./assets/rotation.svg?react";
 import PlusIcon from "./assets/plus.svg?react";
 import MinusIcon from "./assets/minus.svg?react";
 
@@ -64,6 +65,9 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
           onClick={() => handleChangeMode("laptop")}
         >
           <LaptopIcon className="laptop-icon" />
+        </li>
+        <li className="ril-control-item">
+          <RotationIcon className="rotation-icon" />
         </li>
         <li className="ril-control-item" onClick={handleSizeUp}>
           <PlusIcon className="plus-icon" />
