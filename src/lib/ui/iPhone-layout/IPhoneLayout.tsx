@@ -3,7 +3,7 @@ import { useInitIPhone } from "./hooks/useInitIPhone";
 import iPhoneStatus from "./assets/iPhone_status.png";
 import { ControlBox } from "../control-box";
 import "./IPhoneLayout.css";
-import { useLaoyutMode } from "./hooks/useLaoyutMode";
+import { useLayoutMode } from "./hooks/useLayoutMode";
 
 interface IPhoneLayoutProps {
   children: React.ReactNode;
@@ -26,7 +26,7 @@ export function IPhoneLayout({
   maxSize = 100,
 }: IPhoneLayoutProps) {
   const { iPhoneLayoutRef, iPhoneSizeRef } = useInitIPhone(defaultSize);
-  const { currentMode, handleChangeMode } = useLaoyutMode(mode);
+  const { currentMode, handleChangeMode } = useLayoutMode(mode);
 
   return (
     <>
