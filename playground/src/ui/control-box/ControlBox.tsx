@@ -7,6 +7,7 @@ import MinusIcon from "./assets/minus.svg?react";
 import "./ControlBox.css";
 import "./Position.css";
 import { useResize } from "./hooks/useResize";
+import { useRotate } from "./hooks/useRotate";
 
 interface ControlBoxProps {
   position: "top" | "right" | "bottom" | "left";
@@ -33,6 +34,7 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
     minSize,
     maxSize
   );
+  const { handleRotate } = useRotate();
 
   if (mode === "laptop") {
     return (
@@ -66,7 +68,7 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
         >
           <LaptopIcon className="laptop-icon" />
         </li>
-        <li className="ril-control-item">
+        <li className="ril-control-item" onClick={handleRotate}>
           <RotationIcon className="rotation-icon" />
         </li>
         <li className="ril-control-item" onClick={handleSizeUp}>
