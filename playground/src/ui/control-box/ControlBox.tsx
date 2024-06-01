@@ -41,7 +41,7 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
           className="iPhone-active-btn"
           onClick={() => handleChangeMode("iPhone")}
         >
-          <IPhoneIcon className="iphone-icon" width="64" height="64" />
+          <IPhoneIcon className="iphone-icon" width="48" height="48" />
         </button>
       </div>
     );
