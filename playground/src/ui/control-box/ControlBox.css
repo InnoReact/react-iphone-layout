@@ -21,6 +21,10 @@
 }
 
 .ril-control-list .ril-control-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 40px;
   height: 40px;
 
@@ -35,15 +39,10 @@
   fill: var(--ril-control-focus);
 }
 
-.laptop-icon:hover rect {
-  fill: var(--ril-control-focus);
-}
-
-.plus-icon:hover rect,
-.plus-icon:hover line,
-.minus-icon:hover rect,
-.minus-icon:hover line {
+.ril-control-item:hover svg * {
   stroke: var(--ril-control-focus);
+  fill: var(--ril-control-focus);
+  color: var(--ril-control-focus);
 }
 
 .ril-control-list,
