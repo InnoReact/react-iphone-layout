@@ -21,6 +21,9 @@
 
   aspect-ratio: 256 / 538;
   height: var(--iphone-size);
+  rotate: var(--iphone-mode);
+
+  transition: rotate 1.5s;
 }
 
 .ril-client-area {

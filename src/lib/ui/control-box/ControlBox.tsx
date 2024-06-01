@@ -1,11 +1,13 @@
-import IPhoneIcon from "./assets/iPhone.svg?react";
+import IPhoneIcon from "./assets/iphone.svg?react";
 import LaptopIcon from "./assets/laptop.svg?react";
+import RotationIcon from "./assets/rotation.svg?react";
 import PlusIcon from "./assets/plus.svg?react";
 import MinusIcon from "./assets/minus.svg?react";
 
 import "./ControlBox.css";
 import "./Position.css";
-import { useResize } from "./hooks/useResize";
+import { useResize } from "./hooks";
+import { useRotate } from "./hooks";
 
 interface ControlBoxProps {
   position: "top" | "right" | "bottom" | "left";
@@ -32,6 +34,7 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
     minSize,
     maxSize
   );
+  const { handleRotate } = useRotate();
 
   if (mode === "laptop") {
     return (
@@ -40,7 +43,7 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
           className="iPhone-active-btn"
           onClick={() => handleChangeMode("iPhone")}
         >
-          <IPhoneIcon className="iphone-icon" width="64" height="64" />
+          <IPhoneIcon className="iphone-icon" width="48" height="48" />
         </button>
       </div>
     );
@@ -64,6 +67,9 @@ export const ControlBox: React.FC<ControlBoxProps> = ({
           onClick={() => handleChangeMode("laptop")}
         >
           <LaptopIcon className="laptop-icon" />
+        </li>
+        <li className="ril-control-item" onClick={handleRotate}>
+          <RotationIcon className="rotation-icon" />
         </li>
         <li className="ril-control-item" onClick={handleSizeUp}>
           <PlusIcon className="plus-icon" />

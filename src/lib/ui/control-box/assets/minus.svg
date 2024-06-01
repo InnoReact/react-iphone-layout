@@ -1,4 +1,9 @@
-<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="39" height="39" rx="19.5" stroke="#B3B9C4"/>
-<line x1="10" y1="19.5" x2="30" y2="19.5" stroke="#B3B9C4"/>
+<svg
+  width="20"
+  height="2"
+  viewBox="0 0 20 2"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <line y1="1" x2="20" y2="1" stroke="#B3B9C4" stroke-width="2" />
 </svg>
