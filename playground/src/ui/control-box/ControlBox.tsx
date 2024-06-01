@@ -6,8 +6,8 @@ import MinusIcon from "./assets/minus.svg?react";
 
 import "./ControlBox.css";
 import "./Position.css";
-import { useResize } from "./hooks/useResize";
-import { useRotate } from "./hooks/useRotate";
+import { useResize } from "./hooks";
+import { useRotate } from "./hooks";
 
 interface ControlBoxProps {
   position: "top" | "right" | "bottom" | "left";
