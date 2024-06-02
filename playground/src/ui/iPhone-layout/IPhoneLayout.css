@@ -49,29 +49,3 @@
   position: sticky;
   top: 0;
 }
-
-.ril-utility-container {
-  position: absolute;
-  left: 50%;
-  bottom: calc(2% + (var(--iphone-size) - 80%) * 0.025);
-  transform: translateX(-50%);
-
-  display: flex;
-  align-items: center;
-  gap: 24px;
-}
-
-.ril-utility-container .ril-btn-size-down,
-.ril-utility-container .ril-btn-size-up {
-  background-color: transparent;
-  border: 1px solid #8691a2;
-  border-radius: 50%;
-
-  width: 40px;
-  height: 40px;
-
-  color: #fff;
-  font-size: 24px;
-
-  cursor: pointer;
-}
