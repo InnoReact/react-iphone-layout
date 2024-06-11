@@ -21,8 +21,8 @@ $ yarn add react-iphone-layout --dev
 ## Getting Started
 
 ```jsx
-import { IPhoneLayout } from "react-iphone-layout";
-import "react-iphone-layout/dist/ReactIPhoneLayout.css"; // ✨
+import { IPhoneLayout } from 'react-iphone-layout';
+import 'react-iphone-layout/dist/ReactIPhoneLayout.css'; // ✨
 
 function App() {
   return (
@@ -46,6 +46,7 @@ function App() {
 
 ## Demo
 
+- **Storybook**: Try out the react-iphone-layout library in a dynamic environment to view and test each component. [Click here to view the demo.](https://6659c1e97f07954c4600826b-wiynohyjmh.chromatic.com)
 - **CodeSandbox**: Try out the react-iphone-layout library in an interactive online editor. [Click here to view the demo.](https://codesandbox.io/p/devbox/react-iphone-layout-y3mcl7)
 
 ## License
